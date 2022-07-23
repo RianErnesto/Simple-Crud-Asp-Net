@@ -706,3 +706,7 @@ D:\Estudo\AspNetMVC\Simple-Crud-Asp-Net\CRUD_MVC\obj\Debug\netcoreapp3.1\CRUD_MV
 D:\Estudo\AspNetMVC\Simple-Crud-Asp-Net\CRUD_MVC\obj\Debug\netcoreapp3.1\CRUD_MVC.dll
 D:\Estudo\AspNetMVC\Simple-Crud-Asp-Net\CRUD_MVC\obj\Debug\netcoreapp3.1\CRUD_MVC.pdb
 D:\Estudo\AspNetMVC\Simple-Crud-Asp-Net\CRUD_MVC\obj\Debug\netcoreapp3.1\CRUD_MVC.genruntimeconfig.cache
+D:\Estudo\AspNetMVC\Simple-Crud-Asp-Net\CRUD_MVC\obj\Debug\netcoreapp3.1\Razor\Views\Employee\Index.cshtml.g.cs
+D:\Estudo\AspNetMVC\Simple-Crud-Asp-Net\CRUD_MVC\obj\Debug\netcoreapp3.1\Razor\Views\Employee\AddNewEmployee.cshtml.g.cs
+D:\Estudo\AspNetMVC\Simple-Crud-Asp-Net\CRUD_MVC\obj\Debug\netcoreapp3.1\Razor\Views\Employee\DeleteEmployee.cshtml.g.cs
+D:\Estudo\AspNetMVC\Simple-Crud-Asp-Net\CRUD_MVC\obj\Debug\netcoreapp3.1\Razor\Views\Employee\EditEmployee.cshtml.g.cs

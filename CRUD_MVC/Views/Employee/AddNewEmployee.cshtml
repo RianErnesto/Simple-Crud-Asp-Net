@@ -1,0 +1,43 @@
+﻿@{
+    ViewData["Title"] = "Employees Insert Page";
+}
+
+    <h1 class="display-4">Insert Employee</h1>
+
+    <form>
+        <div class="mb-3">
+            <label for="firstName" class="form-label">First Name</label>
+            <input type="text" class="form-control" placeholder="Type the employee First name">
+        </div>
+        <div class="mb-3">
+            <label for="lastName" class="form-label">Last Name</label>
+            <input type="text" class="form-control" placeholder="Type the employee Last name">
+        </div>
+        <div class="mb-3">
+            <label for="lastName" class="form-label">Title</label>
+            <input type="text" class="form-control" placeholder="Type the employee Title">
+        </div>
+        <div class="mb-3">
+            <label for="homePhone" class="form-label">Home Phone</label>
+            <input type="text" class="form-control" placeholder="Type the employee Home Phone">
+        </div>
+        <div class="mb-3">
+            <label for="birthDate" class="form-label">Birth Date</label>
+            <input type="date" class="form-control">
+        </div>
+        <div class="mb-3">
+            <label for="hireDate" class="form-label">Hire Date</label>
+            <input type="date" class="form-control">
+        </div>
+        <div class="mb-3">
+            <select class="form-select" aria-label="Default select example">
+                <option selected>Region</option>
+                <option value="1">America</option>
+                <option value="2">Europe</option>
+                <option value="3">Asia</option>
+            </select>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block">Submit</button>
+        <a role="button" class="btn btn-secondary btn-block" asp-controller="Employee" asp-action="Index">Back</a>
+    </form>

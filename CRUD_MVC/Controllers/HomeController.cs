@@ -11,16 +11,16 @@ namespace CRUD_MVC.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
-        {
-            _logger = logger;
-        }
-
         public IActionResult Index()
         {
-            return View();
+            EmployeeModel employeeModel = new EmployeeModel();
+
+            employeeModel.FirstName = "Rian";
+            employeeModel.LastName = "Ernesto";
+            employeeModel.BirthDate = DateTime.Today;
+            employeeModel.HomePhone = "992146734";
+
+            return View(employeeModel);
         }
 
         public IActionResult Privacy()
