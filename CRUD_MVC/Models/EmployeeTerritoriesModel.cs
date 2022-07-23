@@ -7,7 +7,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace CRUD_MVC.Models
 {
-    public class EmployeeTerritories
+    public class EmployeeTerritoriesModel
     {
         [Key]
         public int EmployeeId { get; set; }

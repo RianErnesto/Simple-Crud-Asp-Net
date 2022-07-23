@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using CRUD_MVC.Models;
+using CRUD_MVC.Repository;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,9 +10,18 @@ namespace CRUD_MVC.Controllers
 {
     public class EmployeeController : Controller
     {
+        private readonly IEmployeeRepository _employeeRepository;
+
+        public EmployeeController(IEmployeeRepository employeeRepository)
+        {
+            _employeeRepository = employeeRepository;
+        }
+
         public IActionResult Index()
         {
-            return View();
+            List<EmployeeModel> model = _employeeRepository.SearchEvery();
+
+            return View(model);
         }
 
         public IActionResult AddNewEmployee()
@@ -26,6 +37,14 @@ namespace CRUD_MVC.Controllers
         public IActionResult DeleteEmployee()
         {
             return View("Index");
+        }
+
+        [HttpPost]
+        public IActionResult AddNewEmployee(EmployeeModel employee)
+        {
+            _employeeRepository.Add(employee);
+
+            return RedirectToAction("Index");
         }
     }
 }
