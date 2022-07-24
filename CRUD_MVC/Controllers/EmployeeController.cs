@@ -19,7 +19,7 @@ namespace CRUD_MVC.Controllers
 
         public IActionResult Index()
         {
-            List<EmployeeModel> model = _employeeRepository.SearchEvery();
+            List<EmployeeModel> model = _employeeRepository.GetAll();
 
             return View(model);
         }
@@ -29,22 +29,69 @@ namespace CRUD_MVC.Controllers
             return View();
         }
 
-        public IActionResult EditEmployee()
-        {
-            return View();
-        }
-
-        public IActionResult DeleteEmployee()
-        {
-            return View("Index");
-        }
-
         [HttpPost]
         public IActionResult AddNewEmployee(EmployeeModel employee)
         {
-            _employeeRepository.Add(employee);
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    _employeeRepository.Add(employee);
+                    TempData["Success"] = $"Employee {employee.FirstName} {employee.LastName} successfully added.";
+                    return RedirectToAction("Index");
+                }
 
-            return RedirectToAction("Index");
+                return View(employee);
+            }
+            catch(System.Exception e)
+            {
+                TempData["Error"] = $"Ops, something went wrong: {e.Message}";
+                return RedirectToAction("Index");
+            }
         }
+
+        public IActionResult EditEmployeeView(int id)
+        {
+            EmployeeModel employee = _employeeRepository.GetEmployee(id);
+
+            return View(employee);
+        }
+
+        public IActionResult EditEmployee(EmployeeModel employee)
+        {
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    _employeeRepository.Update(employee);
+                    TempData["Success"] = $"Employee {employee.FirstName} {employee.LastName} successfully edited.";
+                    return RedirectToAction("Index");
+                }
+
+                return View("EditEmployeeView", employee);
+            }
+            catch(System.Exception e)
+            {
+                TempData["Error"] = $"Ops, something went wrong: {e.Message}";
+                return View("EditEmployeeView", employee);
+            }
+        }
+
+        public IActionResult DeleteEmployee(int id)
+        {
+            try
+            {
+                EmployeeModel deletedEmployee = _employeeRepository.DeleteEmployee(id);
+                TempData["Success"] = $"Employee {deletedEmployee.FirstName} {deletedEmployee.LastName} successfully deleted.";
+                return RedirectToAction("Index");
+            }
+            catch(System.Exception e)
+            {
+                TempData["Error"] = $"Ops, something went wrong: {e.Message}";
+                return RedirectToAction("Index");
+            }
+        }
+
+        
     }
 }

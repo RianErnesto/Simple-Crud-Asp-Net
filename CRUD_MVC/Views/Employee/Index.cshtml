@@ -9,9 +9,34 @@
         <a role="button" class="btn btn-primary" asp-controller="Employee" asp-action="AddNewEmployee">Add Employee</a>
     </div>
 
+    <br />
+
+    @if (TempData["Success"] != null)
+    {
+        <div class="alert alert-success" role="alert">
+            @TempData["Success"]
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    }
+
+    @if (TempData["Erro"] != null)
+    {
+        <div class="alert alert-danger" role="alert">
+            @TempData["Erro"]
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    }
+
+    <br />
+
+
     <h1 class="display-4">Employees Grid Page</h1>
 
-    <table class="table">
+    <table class="table" id="table-employees">
         <thead>
             <tr>
                 <th scope="col">#</th>
@@ -35,7 +60,7 @@
                         <td>@employee.HomePhone</td>
                         <td>
                             <div class="btn-group" role="group">
-                                <a role="button" class="btn btn-secondary" asp-route-id="@employee.EmployeeID" asp-controller="Employee" asp-action="EditEmployee">Edit</a>
+                                <a role="button" class="btn btn-secondary" asp-route-id="@employee.EmployeeID" asp-controller="Employee" asp-action="EditEmployeeView">Edit</a>
                                 <a role="button" class="btn btn-danger" asp-route-id="@employee.EmployeeID" asp-controller="Employee" asp-action="DeleteEmployee">Delete</a>
                             </div>
                         </td>

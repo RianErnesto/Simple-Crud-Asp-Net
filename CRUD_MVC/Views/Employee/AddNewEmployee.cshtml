@@ -10,14 +10,17 @@
         <div class="mb-3">
             <label for="firstName" class="form-label">First Name</label>
             <input type="text" asp-for="FirstName" class="form-control" placeholder="Type the employee First Name">
+            @Html.ValidationMessageFor(x => x.FirstName)
         </div>
         <div class="mb-3">
             <label for="lastName" class="form-label">Last Name</label>
             <input type="text" asp-for="LastName" class="form-control" placeholder="Type the employee Last Name">
+            @Html.ValidationMessageFor(x => x.LastName)
         </div>
         <div class="mb-3">
             <label for="lastName" class="form-label">Title</label>
             <input type="text" asp-for="Title" class="form-control" placeholder="Type the employee Title">
+            @Html.ValidationMessageFor(x => x.Title)
         </div>
         <div class="mb-3">
             <label for="titleCourtesy" class="form-label">Title of Courtesy</label>
@@ -26,6 +29,7 @@
         <div class="mb-3">
             <label for="homePhone" class="form-label">Home Phone</label>
             <input type="text" asp-for="HomePhone" class="form-control" placeholder="Type the employee Home Phone">
+            @Html.ValidationMessageFor(x => x.HomePhone)
         </div>
         <div class="mb-3">
             <label for="birthDate" class="form-label">Birth Date</label>

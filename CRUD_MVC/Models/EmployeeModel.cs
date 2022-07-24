@@ -12,13 +12,13 @@ namespace CRUD_MVC.Models
         [Key]
         public int EmployeeID { get; set; }
         [StringLength(20)]
-        [Required]
+        [Required(ErrorMessage = "Insert employee Last Name")]
         public string LastName { get; set; }
         [StringLength(10)]
-        [Required]
+        [Required(ErrorMessage = "Insert employee First Name")]
         public string FirstName { get; set; }
         [StringLength(30)]
-        [Required]
+        [Required(ErrorMessage = "Insert employee Title")]
         public string Title { get; set; }
         [StringLength(25)]
         public string TitleOfCourtesy { get; set; }
@@ -37,6 +37,7 @@ namespace CRUD_MVC.Models
         [StringLength(15)]
         public string Country { get; set; }
         [StringLength(24)]
+        [Phone(ErrorMessage = "Insert a valid Phone number format")]
         public string HomePhone { get; set; }
         [StringLength(4)]
         public string Extension { get; set; }

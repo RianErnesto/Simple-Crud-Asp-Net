@@ -697,7 +697,6 @@ D:\Estudo\AspNetMVC\Simple-Crud-Asp-Net\CRUD_MVC\obj\Debug\netcoreapp3.1\CRUD_MV
 D:\Estudo\AspNetMVC\Simple-Crud-Asp-Net\CRUD_MVC\obj\Debug\netcoreapp3.1\Razor\Views\Employee\Index.cshtml.g.cs
 D:\Estudo\AspNetMVC\Simple-Crud-Asp-Net\CRUD_MVC\obj\Debug\netcoreapp3.1\Razor\Views\Employee\AddNewEmployee.cshtml.g.cs
 D:\Estudo\AspNetMVC\Simple-Crud-Asp-Net\CRUD_MVC\obj\Debug\netcoreapp3.1\Razor\Views\Employee\DeleteEmployee.cshtml.g.cs
-D:\Estudo\AspNetMVC\Simple-Crud-Asp-Net\CRUD_MVC\obj\Debug\netcoreapp3.1\Razor\Views\Employee\EditEmployee.cshtml.g.cs
 D:\Estudo\AspNetMVC\Simple-Crud-Asp-Net\CRUD_MVC\bin\Debug\netcoreapp3.1\Humanizer.dll
 D:\Estudo\AspNetMVC\Simple-Crud-Asp-Net\CRUD_MVC\bin\Debug\netcoreapp3.1\Microsoft.Data.SqlClient.dll
 D:\Estudo\AspNetMVC\Simple-Crud-Asp-Net\CRUD_MVC\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
@@ -740,3 +739,4 @@ D:\Estudo\AspNetMVC\Simple-Crud-Asp-Net\CRUD_MVC\bin\Debug\netcoreapp3.1\runtime
 D:\Estudo\AspNetMVC\Simple-Crud-Asp-Net\CRUD_MVC\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
 D:\Estudo\AspNetMVC\Simple-Crud-Asp-Net\CRUD_MVC\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 D:\Estudo\AspNetMVC\Simple-Crud-Asp-Net\CRUD_MVC\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+D:\Estudo\AspNetMVC\Simple-Crud-Asp-Net\CRUD_MVC\obj\Debug\netcoreapp3.1\Razor\Views\Employee\EditEmployeeView.cshtml.g.cs
