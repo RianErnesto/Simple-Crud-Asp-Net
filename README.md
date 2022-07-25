@@ -8,7 +8,7 @@ Open appsettings.json file, and in "DataBase" field insert your database server 
 If you are using Windows Authentication on your SQL server, you should only change server name in the file, otherwise, you have to use the following pattern in "DataBase" field: "DataBase": "Server={your-database-server-name};Database=DB_Northwind-Like;User Id={your-database-server-user};Password={your-database-server-password}"
 
 Open the Package Manager Console and type the following instructions: 
-  Add-Migration CreatingNorthwindDataBase -Contetx BancoContext
-  Update-Database -Context BancoContext
+  Add-Migration CreatingNorthwindDataBase -Context ContextDataBase
+  Update-Database -Context ContextDataBase
   
 Now you're able to run the project and check the CRUD web page.
